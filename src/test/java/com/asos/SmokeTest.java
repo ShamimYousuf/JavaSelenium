@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -18,6 +19,7 @@ public class SmokeTest {
     @Before
     public void setUp(){
         driver= new FirefoxDriver();
+        driver.manage().window().maximize();
     }
 
     @Test
@@ -37,6 +39,11 @@ public class SmokeTest {
         actions.perform();
 
         Assert.assertEquals(driver.getTitle(), "New clothing | The latest fashion clothing | ASOS");
+
+        WebElement slider = driver.findElement(By.xpath("//div[@id='slider']/a"));
+        Actions moveSlider = new Actions(driver);
+        Action action = (Action) moveSlider.dragAndDropBy(slider, 30, 0).build();
+        action.perform();
 
         Select oSelection = new Select(driver.findElement(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
         oSelection.selectByVisibleText("Price high to low");
