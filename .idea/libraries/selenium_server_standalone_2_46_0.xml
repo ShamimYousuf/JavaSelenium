@@ -5,6 +5,9 @@
       <root url="jar://$PROJECT_DIR$/selenium-htmlunit-driver-2.21.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/selenium-safari-driver-2.29.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/test/resources/selenium-chrome-driver-2.0a4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/test/resources/selenium-htmlunit-driver-2.21.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/test/resources/selenium-safari-driver-2.29.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/test/resources/selenium-server-standalone-2.46.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
