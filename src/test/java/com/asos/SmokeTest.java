@@ -31,13 +31,15 @@ public class SmokeTest {
         WebElement menuHoverLink = driver.findElement(By.cssSelector(".floor_1 "));
         actions.moveToElement(menuHoverLink);
 
-        WebElement subLink = driver.findElement(By.cssSelector(".sub-floor-menu .section ul.items:nth-of-type(2) li a"));
-
+        WebElement subLink = driver.findElement(By.cssSelector(".sub-floor-menu .section ul.items:nth-child(2) li a"));
         actions.moveToElement(subLink);
         actions.click();
         actions.perform();
 
         Assert.assertEquals("Jewellery | Necklaces, bracelets, earrings & watches | ASOS",driver.getTitle());
+
+        WebElement price =  driver.findElement(By.cssSelector(".price"));
+        Assert.assertEquals("£6.00", price.getText());
 
         WebElement slider = driver.findElement(By.cssSelector("a.ui-slider-handle"));
 
