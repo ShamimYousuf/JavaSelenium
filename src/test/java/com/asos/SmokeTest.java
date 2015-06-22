@@ -41,10 +41,11 @@ public class SmokeTest {
         WebElement price =  driver.findElement(By.cssSelector(".price"));
         Assert.assertEquals("£6.00", price.getText());
 
-        WebElement slider = driver.findElement(By.cssSelector("a.ui-slider-handle"));
+//        WebElement slider = driver.findElement(By.cssSelector("a.ui-slider-handle"));
+        WebElement slider = driver.findElement(By.cssSelector("#slider a + a"));
 
         Actions moveSlider = new Actions(driver);
-        Action action = (Action) moveSlider.dragAndDropBy(slider, 30, 0).build();
+        Action action = (Action) moveSlider.dragAndDropBy(slider, -90, 0).build();
         action.perform();
 
         Select oSelection = new Select(driver.findElement(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
