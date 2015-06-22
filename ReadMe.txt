@@ -1,0 +1,1 @@
+Firefox 33 is fine with 2.45.0
