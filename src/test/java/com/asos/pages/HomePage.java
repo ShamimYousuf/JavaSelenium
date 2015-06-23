@@ -23,15 +23,15 @@ public class HomePage {
         ReadProperties readProperties = new ReadProperties();
         String url = readProperties.getTestUrl();
         driver.get(url);
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.urlContains("asos"));
+        (new WebDriverWait(driver, 5)).until(ExpectedConditions.presenceOfElementLocated(By.id("logo")));
         return new HomePage(driver);
     }
 
     public CategoryPage navigateToWomenCategory(int col, int row){
 
         Actions actions = new Actions(driver);
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".floor_1 ")));
-        Assert.assertTrue(driver.findElement(By.cssSelector(".floor_1 ")).isDisplayed());
+        (new WebDriverWait(driver, 5)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".floor_1 ")));
+        Assert.assertTrue(driver.findElement(By.cssSelector(".floor_1 ")).isEnabled());
 
         WebElement menuHoverLink = driver.findElement(By.cssSelector(".floor_1 "));
 

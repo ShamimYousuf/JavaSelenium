@@ -36,17 +36,17 @@ public class CategoryPage {
     }
 
     public String getMinimumPriceRange() {
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("userMin")));
+        (new WebDriverWait(driver, 5)).until(ExpectedConditions.presenceOfElementLocated(By.id("userMin")));
         return driver.findElement(By.id("userMin")).getText();
     }
 
     public String getMaximumPriceRange() {
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("userMax")));
+        (new WebDriverWait(driver, 5)).until(ExpectedConditions.presenceOfElementLocated(By.id("userMax")));
         return driver.findElement(By.id("userMax")).getText();
     }
 
     public void sortBy(String sortText) {
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
+        (new WebDriverWait(driver, 5)).until(ExpectedConditions.presenceOfElementLocated(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
         Select oSelection = new Select(driver.findElement(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
         oSelection.selectByVisibleText(sortText);
     }
