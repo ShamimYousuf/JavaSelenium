@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadProperties.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ReadProperties.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="4" selection-start="709" selection-end="709" vertical-scroll-proportion="0.8490566">
+            <state line="29" column="19" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,10 +78,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmokeTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SmokeTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="35" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0">
+            <state line="25" column="44" selection-start="801" selection-end="801" vertical-scroll-proportion="0.38793105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="58" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +99,7 @@
       <file leaf-file-name="CategoryPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/CategoryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="74" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+            <state line="20" column="89" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,7 +110,7 @@
       <file leaf-file-name="HomePage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="82" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+            <state line="38" column="58" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,11 +136,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/asos/PolyTest.java" />
         <option value="$PROJECT_DIR$/ReadMe.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/asos/pages/CategoryPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/asos/pages/CategoryPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java" />
       </list>
     </option>
   </component>
@@ -284,6 +293,36 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaSelenium" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaSelenium" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -332,7 +371,7 @@
       <recent name="com.asos" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SmokeTest">
+  <component name="RunManager" selected="JUnit.SmokeTest.pricingTextIsPresent">
     <configuration default="false" name="SmokeTest.verifyPricingRangeFilterTest1" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="JavaSelenium" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -711,14 +750,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="67" selection-start="994" selection-end="994" vertical-scroll-proportion="0.9433962">
+        <state line="18" column="58" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="58" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/CategoryPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="74" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+        <state line="20" column="89" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -732,9 +780,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="82" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+        <state line="29" column="19" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -743,17 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="35" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0">
+        <state line="25" column="44" selection-start="801" selection-end="801" vertical-scroll-proportion="0.38793105">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="709" selection-end="709" vertical-scroll-proportion="0.8490566">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

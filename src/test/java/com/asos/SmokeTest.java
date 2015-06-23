@@ -13,23 +13,29 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class SmokeTest {
 
-    WebDriver driver;
+    public static WebDriver driver;
+
+    @BeforeClass
+    public static void setUp() throws IOException {
+        driver= new FirefoxDriver();
+        driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+    }
 
     @Before
-    public void setUp() throws IOException {
-        driver= new FirefoxDriver();
-        driver.manage().window().maximize();
+    public void testSetUp() throws IOException {
 
+        HomePage homePage = new HomePage(driver);
+        homePage.navigateToHomePage();
+        homePage.navigateToWomenCategory(2,1);
     }
 
     @Test
     public void pricingTextIsPresent() throws IOException {
-        HomePage homePage = new HomePage(driver);
-        homePage.navigateToHomePage();
-        homePage.navigateToWomenCategory(2,1);
 
         CategoryPage categoryPage = new CategoryPage(driver);
         Assert.assertEquals("Price is expected", "£15.00", categoryPage.getPriceTextOfFirstElement().toString());
@@ -37,9 +43,6 @@ public class SmokeTest {
 
     @Test
     public void canReduceTheMinimumPriceRangeInPriceFilter() throws IOException {
-        HomePage homePage = new HomePage(driver);
-        homePage.navigateToHomePage();
-        homePage.navigateToWomenCategory(2,1);
 
         CategoryPage categoryPage = new CategoryPage(driver);
         String originalMinPriceLimit = categoryPage.getMaximumPriceRange();
@@ -49,9 +52,6 @@ public class SmokeTest {
 
     @Test
     public void canReduceTheMaximumPriceRangeInPriceFilter() throws IOException {
-        HomePage homePage = new HomePage(driver);
-        homePage.navigateToHomePage();
-        homePage.navigateToWomenCategory(2,1);
 
         CategoryPage categoryPage = new CategoryPage(driver);
         String originalMaxPriceLimit = categoryPage.getMaximumPriceRange();
@@ -61,16 +61,13 @@ public class SmokeTest {
 
     @Test
     public void sortingIsPresent() throws IOException {
-        HomePage homePage = new HomePage(driver);
-        homePage.navigateToHomePage();
-        homePage.navigateToWomenCategory(2,1);
 
         CategoryPage categoryPage = new CategoryPage(driver);
         categoryPage.sortBy("Price high to low");
     }
 
-    @After
-    public void tearDown(){
+    @AfterClass
+    public static void tearDown(){
         driver.close();
     }
 
