@@ -58,19 +58,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ReadMe.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadMe.txt">
+      <file leaf-file-name="config.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="34" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+            <state line="0" column="40" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmokeTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ReadProperties.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="4" selection-start="709" selection-end="709" vertical-scroll-proportion="0.8490566">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmokeTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="49" selection-start="733" selection-end="733" vertical-scroll-proportion="-0.74568963">
+            <state line="64" column="35" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +101,7 @@
       <file leaf-file-name="HomePage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="71" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+            <state line="23" column="82" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,9 +127,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/asos/PolyTest.java" />
         <option value="$PROJECT_DIR$/ReadMe.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/asos/pages/CategoryPage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java" />
       </list>
     </option>
   </component>
@@ -197,30 +210,8 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaSelenium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaSelenium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asos" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,8 +240,34 @@
               <option name="myItemId" value="asos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="JavaSelenium" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaSelenium" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -699,15 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="71" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/CategoryPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="74" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
@@ -717,10 +725,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="40" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="82" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/SmokeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="733" selection-end="733" vertical-scroll-proportion="-0.74568963">
+        <state line="64" column="35" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/asos/util/ReadProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="4" selection-start="709" selection-end="709" vertical-scroll-proportion="0.8490566">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
