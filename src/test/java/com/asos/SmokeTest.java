@@ -1,9 +1,8 @@
 package com.asos;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import com.asos.pages.CategoryPage;
+import com.asos.pages.HomePage;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,34 +22,47 @@ public class SmokeTest {
     }
 
     @Test
-    public void verifyPricingRangeFilterTest1(){
+    public void pricingTextIsPresent(){
+        HomePage homePage = new HomePage(driver);
+        homePage.navigateTo("http://www.asos.com");
+        homePage.navigateToWomenCategory(2,1);
 
-        driver.get("http://www.asos.com");
+        CategoryPage categoryPage = new CategoryPage(driver);
+        Assert.assertEquals("Price is expected", "£15.00", categoryPage.getPriceTextOfFirstElement().toString());
+    }
 
-        Actions actions = new Actions(driver);
-        WebElement menuHoverLink = driver.findElement(By.cssSelector(".floor_1 "));
-        actions.moveToElement(menuHoverLink);
+    @Test
+    public void canReduceTheMinimumPriceRangeInPriceFilter(){
+        HomePage homePage = new HomePage(driver);
+        homePage.navigateTo("http://www.asos.com");
+        homePage.navigateToWomenCategory(2,1);
 
-        WebElement subLink = driver.findElement(By.cssSelector(".sub-floor-menu .section ul.items:nth-child(2) li a"));
-        actions.moveToElement(subLink);
-        actions.click();
-        actions.perform();
+        CategoryPage categoryPage = new CategoryPage(driver);
+        String originalMinPriceLimit = categoryPage.getMaximumPriceRange();
+        categoryPage.reduceMinimumPriceRange(30);
+        Assert.assertNotEquals("Minimum price range is not equal to 0",originalMinPriceLimit,categoryPage.getMinimumPriceRange());
+    }
 
-        Assert.assertEquals("Jewellery | Necklaces, bracelets, earrings & watches | ASOS",driver.getTitle());
+    @Test
+    public void canReduceTheMaximumPriceRangeInPriceFilter(){
+        HomePage homePage = new HomePage(driver);
+        homePage.navigateTo("http://www.asos.com");
+        homePage.navigateToWomenCategory(2,1);
 
-        WebElement price =  driver.findElement(By.cssSelector(".price"));
-        Assert.assertEquals("£6.00", price.getText());
+        CategoryPage categoryPage = new CategoryPage(driver);
+        String originalMaxPriceLimit = categoryPage.getMaximumPriceRange();
+        categoryPage.reduceMaximumPriceRange(-90);
+        Assert.assertNotEquals("Minimum price range is not equal to original max",originalMaxPriceLimit,categoryPage.getMaximumPriceRange());
+    }
 
-//        WebElement slider = driver.findElement(By.cssSelector("a.ui-slider-handle"));
-        WebElement slider = driver.findElement(By.cssSelector("#slider a + a"));
+    @Test
+    public void sortingIsPresent(){
+        HomePage homePage = new HomePage(driver);
+        homePage.navigateTo("http://www.asos.com");
+        homePage.navigateToWomenCategory(2,1);
 
-        Actions moveSlider = new Actions(driver);
-        Action action = (Action) moveSlider.dragAndDropBy(slider, -90, 0).build();
-        action.perform();
-
-        Select oSelection = new Select(driver.findElement(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
-        oSelection.selectByVisibleText("Price high to low");
-
+        CategoryPage categoryPage = new CategoryPage(driver);
+        categoryPage.sortBy("Price high to low");
     }
 
     @After
