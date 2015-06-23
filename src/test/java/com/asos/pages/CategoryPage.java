@@ -5,10 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 public class CategoryPage {
     WebDriver driver;
@@ -18,6 +15,7 @@ public class CategoryPage {
     }
 
     public String getPriceTextOfFirstElement(){
+        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".price")));
         return driver.findElement(By.cssSelector(".price")).getText();
     }
 
@@ -48,6 +46,7 @@ public class CategoryPage {
     }
 
     public void sortBy(String sortText) {
+        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
         Select oSelection = new Select(driver.findElement(By.id("ctl00_ContentMainPage_ctlCategoryRefine_drpdwnPageSort")));
         oSelection.selectByVisibleText(sortText);
     }
