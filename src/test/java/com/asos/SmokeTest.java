@@ -5,7 +5,9 @@ import com.asos.pages.HomePage;
 
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +20,6 @@ public class SmokeTest {
     @BeforeClass
     public static void setUp() throws IOException {
         driver= new FirefoxDriver();
-
         driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
